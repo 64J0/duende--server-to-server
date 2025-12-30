@@ -33,6 +33,11 @@ sequenceDiagram
 2. Start the API server: `dotnet run --project src/Api`
 3. Use the Client: `dotnet run --project src/Client`
 
+> [!NOTE]
+> On first startup, IdentityServer will use its automatic key management feature to create a signing key and store it in the src/IdentityServer/keys directory. To avoid accidentally disclosing cryptographic secrets, the entire keys directory should be excluded from source control. It will be recreated if it is not present.
+>
+> --- [Protecting An API With Client Credentials](https://docs.duendesoftware.com/identityserver/quickstarts/1-client-credentials/#configuring-identityserver)
+
 You'll get a response like:
 
 ```bash
