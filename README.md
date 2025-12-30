@@ -17,9 +17,9 @@ sequenceDiagram
     participant Client as Client<br>Console App
     participant IDP as Identity Provider<br>ASP.NET Core with<br>IdentityServer
     participant API as API<br>ASP.NET Core
-    Client->>+IDP: Give me the access token (using secret credentials)
-    IDP-->>-Client: Verified credentials and return the token
-    Client->>+API: Get the protected data from the API using access token
+    Client->>+IDP: Give me the access token (using client secret)
+    IDP-->>-Client: Verified credentials and return the access token
+    Client->>+API: Give me the protected data from the API using access token
     API-->>-Client: Here is the protected data
 ```
 
