@@ -10,6 +10,8 @@ This is the [first quickstart project](https://docs.duendesoftware.com/identitys
 >
 > The client will request an access token from IdentityServer using its client ID and secret and then use the token to gain access to the API.
 
+*Id est*, in this example we have a machine-to-machine (or server-to-server) scenario, where two "machines" talk to each other, and there is no interactive user present. In protocol terminology this is called *Client Credentials Flow*.
+
 ## Client credentials flow
 
 ```mermaid
